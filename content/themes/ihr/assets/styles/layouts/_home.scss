@@ -1,0 +1,77 @@
+.home-about{
+
+
+
+
+
+	.read-more{
+		display:inline-block;
+		color:#48c7ff;
+		@include font('opensans');
+		letter-spacing: 0.4px;
+		font-weight:600;
+		font-size:17px;
+		&.button{
+			color:#fff;
+			background:#48c7ff;
+			padding:9px 15px;
+		}
+		&:after{
+			content: "\e906";
+			margin:0 0 0 10px;
+			vertical-align:middle;
+			@include icomoon();
+		}
+	}
+
+
+
+
+
+
+
+	.hero{
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size:484px 330px;
+		min-height:330px;
+		display:table;
+		width:100%;
+
+		.copy{
+			padding:30px 0;
+			max-width:560px;
+		}
+	}
+
+
+	h1{
+		font-size:52px;
+		margin:7px 0 17px;
+	}
+
+
+
+	.feature-pages{
+
+	}
+		.feature{
+			max-width:450px;
+			img{
+				max-width:100%;
+				height:auto;
+			}
+			.copy{
+				width:410px;
+				background:#fff;
+
+			}
+		}
+
+
+
+
+
+
+
+}

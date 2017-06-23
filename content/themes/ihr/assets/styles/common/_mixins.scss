@@ -1,0 +1,194 @@
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin transition($ms:300ms,$attr:all,$type:ease) {
+    -webkit-transition: $attr $ms $type;
+    -moz-transition: $attr $ms $type;
+    -ms-transition: $attr $ms $type;
+    -o-transition: $attr $ms $type;
+    transition: $attr $ms $type;
+}
+
+@mixin delay($ms) {
+    -webkit-transition-delay: $ms;
+    -moz-transition-delay: $ms;
+    -o-transition-delay: $ms;
+    transition-delay: $ms;
+}
+
+@mixin rotation($deg) {
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin zoom($amt){
+    -webkit-transform: scale($amt);
+    -moz-transform: scale($amt);
+    -o-transform: scale($amt);
+    transform: scale($amt);
+}
+@mixin transform($amt){
+    -webkit-transform: $amt;
+    -moz-transform: $amt;
+    //-ms-transform: $amt; kills the build
+    -o-transform: $amt;
+    transform: $amt;
+}
+
+@mixin transform-origin($loc:top right){
+    -webkit-transform-origin: $loc;
+    -moz-transform-origin: $loc;
+    -o-transform-origin: $loc;
+    transform-origin: $loc;
+}
+@mixin transition-transform($transition) {
+    -webkit-transition: -webkit-transform $transition;
+    -moz-transition: -moz-transform $transition;
+    -o-transition: -o-transform $transition;
+    transition: transform $transition;
+}
+@mixin perspective($amt){
+    -webkit-perspective: $amt;
+    -moz-perspective: $amt;
+    -o-perspective: $amt;
+    perspective: $amt;
+}
+@mixin perspective-origin($loc){
+    -webkit-perspective-origin: $loc;
+    -moz-perspective-origin: $loc;
+    -o-perspective-origin: $loc;
+    perspective-origin: $loc;
+}
+@mixin blur($amount){
+    -webkit-filter: blur($amount);
+    -moz-filter: blur($amount);
+    -o-filter: blur($amount);
+    -ms-filter: blur($amount);
+    filter: blur($amount);
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+    @if $inset {
+        -webkit-box-shadow:inset $top $left $blur $color;
+        -moz-box-shadow:inset $top $left $blur $color;
+        box-shadow:inset $top $left $blur $color;
+    } @else {
+        -webkit-box-shadow: $top $left $blur $color;
+        -moz-box-shadow: $top $left $blur $color;
+        box-shadow: $top $left $blur $color;
+    }
+}
+
+@mixin transitionAll($speed) {
+    -webkit-transition: -webkit-transform $speed ease-in-out;
+    -moz-transition: -moz-transform $speed ease-in-out;
+    -o-transition: -o-transform $speed ease-in-out;
+    transition: all $speed ease-in-out;
+}
+
+@mixin placeholder {
+    ::-webkit-input-placeholder {@content}
+    :-moz-placeholder           {@content}
+    ::-moz-placeholder          {@content}
+    :-ms-input-placeholder      {@content}
+}
+
+
+
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}
+
+
+
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation:    $animations;
+    -o-animation:      $animations;
+    animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+
+
+//lazier way to for mz to write mq's
+
+$screen-xs-min:                  320px;
+$screen-sm-min:                  480px;
+$screen-md-min:                  768px;
+$screen-menu-min:                850px;
+$screen-lg-min:                  950px;
+
+@mixin xs-max {
+    @media (max-width: $screen-xs-min) {
+        @content;
+    }
+}
+
+@mixin sm-max {
+    @media (max-width: $screen-sm-min) {
+        @content;
+    }
+}
+@mixin menu-max {
+    @media (max-width: $screen-menu-min) {
+        @content;
+    }
+}
+
+@mixin md-max {
+    @media (max-width: $screen-md-min) {
+        @content;
+    }
+}
+
+@mixin lg-max {
+    @media (max-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+//HEIGHT MQ's
+@mixin md-max-height {
+    @media (max-height: $screen-md-min) {
+        @content;
+    }
+}
+@mixin lg-max-height {
+    @media (max-height: $screen-lg-min) {
+        @content;
+    }
+}
