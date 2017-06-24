@@ -2,10 +2,11 @@
 	margin:0 0 17px;
 
 	.container{
-		width:100%;
+		
 		overflow:hidden;
 		position:relative;
 		padding:0 0 6px;
+
 
 		.brand{
 			height:55px;
@@ -43,12 +44,7 @@
 			bottom:0;
 			position:absolute;
 			display:block;
-			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a6acff+0,71e4ff+100 */
-			background: #a6acff; /* Old browsers */
-			background: -moz-linear-gradient(left, #a6acff 0%, #71e4ff 100%); /* FF3.6-15 */
-			background: -webkit-linear-gradient(left, #a6acff 0%,#71e4ff 100%); /* Chrome10-25,Safari5.1-6 */
-			background: linear-gradient(to right, #a6acff 0%,#71e4ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6acff', endColorstr='#71e4ff',GradientType=1 ); /* IE6-9 */
+			@include gradient-underline();
 		}
     }
 }

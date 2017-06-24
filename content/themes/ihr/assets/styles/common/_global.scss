@@ -27,9 +27,9 @@ body,html{
 }
 body{
 	color:#000;
-	font-size:14px;
+	font-size:16px;
   background-color:#fff;
-	line-height:1;
+	line-height:18px;
 	@include font();
   font-weight:400;
 
@@ -83,17 +83,29 @@ h1,h2{
     font-size:28px;
     line-height:32px;
   }
+  a{
+    color: #000;
+    &:hover{
+      color:#616161;
+    }
+  }
 }
 
 h3{
-  font-size:22px;
-  font-weight: 700;
-  margin:0;
-  text-transform:uppercase;
-    @include md-max{
-      font-size:18px;
-      margin: 0 0 12px;
-    }
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.12;
+
+  &.bar{
+    font-size: 24px;
+    line-height: 27px;
+    font-weight:400;
+    background:#000;
+    color:#fff;
+    display:inline-block;
+    padding:0 1px 0 36px;
+  }
+
 }
 h4,h5,h6{
   font-size:16px;
@@ -120,10 +132,14 @@ p{
   color: #000;
   margin:0 0 20px;
 }
-form,input{
-	font-size:18px;
+form{
+  font-size:16px;
+  @include font();
+}
+input{
+	font-size:16px;
 	margin:0;
-	@include font();
+	@include font('opensans');
 }
 
 
@@ -133,6 +149,20 @@ padding:0;
 list-style:none;
 }
 
+
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+}
 
 
 img{
@@ -153,9 +183,35 @@ img{
 }
   .container{
     max-width: 930px;
-    margin:0 auto;
+    margin:0 10px;
   }
 
+
+
+
+
+
+
+.read-more{
+  display:inline-block;
+  color:#48c7ff;
+  @include font('opensans');
+  letter-spacing: 0.4px;
+  font-weight:600;
+  font-size:17px;
+  &.button{
+    color:#fff;
+    background:#48c7ff;
+    padding:12px 15px 11px;
+  }
+  &:after{
+    content: "\e906";
+    margin:0 0 0 10px;
+    vertical-align:middle;
+    @include icomoon();
+    font-size:12px;
+  }
+}
 
 
 

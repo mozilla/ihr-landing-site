@@ -165,6 +165,28 @@
                 "class": "",
                 "id": ""
             }
+        },
+        {
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1,
+            "key": "field_594e01f7c6d92",
+            "label": "Feature Posts",
+            "name": "feature_posts",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
         }
     ],
     "location": [
@@ -184,5 +206,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1498212702
+    "modified": 1498284846
 }

@@ -76,11 +76,20 @@
 }
 @font-face {
     font-family: 'Zilla Slab';
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/ZillaSlab-Bold.ca473b6dca81.woff2") format("woff2"), 
+    	 url("../fonts/ZillaSlab-Bold.86022b521dd3.woff") format("woff");
+}
+/*
+@font-face {
+    font-family: 'Zilla Slab Highlight';
     src: url('../fonts/zillaslabhighlight-bold-webfont.woff2') format('woff2'),
          url('../fonts/zillaslabhighlight-bold-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
+*/
 @font-face {
     font-family: 'Zilla Slab';
     src: url('../fonts/zillaslab-light-webfont.woff2') format('woff2'),
