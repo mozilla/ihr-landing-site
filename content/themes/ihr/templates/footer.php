@@ -19,17 +19,21 @@
 			<div id="newsletter_errors" class="newsletter_errors"></div>
 
 			<div id="newsletter_email" class="form_group form_group_email">
-				<input type="email" id="email" name="email" class="signup-form__email" required="" placeholder="Your email here" size="30">
+				<input type="email" id="email" name="email" class="signup-form__email" required="" placeholder="Email address" size="30">
+				
+
+				<div id="newsletter_privacy" class="form_group form_group-agree">
+					<label for="privacy">
+					<input type="checkbox" id="privacy" name="privacy" class="signup-form__checkbox" required="">
+					<div class="signup-form__checkbox-label">I’m okay with mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/websites/">privacy notice</a>.
+					</div>
+					</label>
+				</div>
+
+
 				<button id="newsletter_submit" type="submit" class="signup-form__btn">Join us</button>
 			</div>
 
-			<div id="newsletter_privacy" class="form_group form_group-agree">
-				<label for="privacy">
-				<input type="checkbox" id="privacy" name="privacy" class="signup-form__checkbox" required="">
-				<div class="signup-form__checkbox-label">I’m okay with mozilla handling my info as explained in this <a href="https://www.mozilla.org/privacy/websites/">privacy notice</a>.
-				</div>
-				</label>
-			</div>
 
 			<div>
 			</div>

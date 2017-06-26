@@ -10,10 +10,16 @@
 		display:table;
 		width:100%;
 		margin:0 0 28px;
-
+		@include md-max{
+			background:none!important;
+			min-height: 0;
+		}
 		.copy{
 			padding:30px 0;
 			max-width:560px;
+			@include md-max{
+				padding: 5px 0 20px;
+			}
 		}
 	}
 
@@ -22,6 +28,9 @@
 		font-size:52px;
 		line-height:1;
 		margin:7px 0 7px;
+		@include md-max{
+			font-size:38px;
+		}
 	}
 
 
@@ -37,6 +46,12 @@
 		display: -ms-flexbox;
 		display: flex;
 
+		@include md-max{
+			display:block;
+			padding:0 0 10px;
+			margin:0 0 32px;
+		}
+
 		&:after{
 			content:'';
 			width: 100%;
@@ -51,13 +66,23 @@
 			max-width:450px;
 			//float:left;
 			position:relative;
+			@include md-max{
+				margin:0 0 40px;
+				max-width:100%;
+			}
 			&.right{
 				//float:right;
-				margin:0 0 0 30px;
+				margin-left:30px;
+				@include md-max{
+					margin-left:0;
+				}
 			}
 			img{
 				max-width:100%;
 				height:auto;
+				@include md-max{
+					width:100%;
+				}
 			}
 			.copy{
 				max-width:357px;
@@ -68,6 +93,10 @@
 				@include lg-max{
 					margin:0;
 					padding:14px 3% 38px;
+				}
+				@include md-max{
+					padding:10px 0 0;
+					max-width:100%;
 				}
 			}
 				h2{
@@ -85,6 +114,10 @@
 				@include lg-max{
 					left:3%;
 				}
+				@include md-max{
+					position:relative;
+					left:0;
+				}
 			}
 		}
 
@@ -95,65 +128,23 @@
 
 		margin:0 0 58px;
 
-		.entry-container{
-			display:block;
-			margin: 0 0 20px;
+		@include md-max{
+			margin:0 0 33px;
 		}
-			img{
-				margin:0 32px 20px 0;
-				@include lg-max{
-					margin-right:3%;
-					max-width: 30%;
-					height: auto;
-				}
+		h3{
+			margin:0 0 51px;
+			@include md-max{
+				margin:0 0 33px;
 			}
-			.entry-copy{
-				display:inline-block;
-				vertical-align:top;
-				position:relative;
-				width:603px;
-				@include lg-max{
-					width:66%;
-				}
+		}
 
-				&:before{
-					content:'';
-					position:absolute;
-					top:0;
-					left:0;
-					width:100%;
-					height:1px;
-					background:#000;
-				}
+		//.entry-container in _posts.scss
 
-			}
-				h3{
-					margin:0 0 51px;
-				}
-
-				.entry-meta{
-					.pipe{
-						margin:0 5px;
-					}
-					.cat{
-						span{
-							background:#b0b3e7;
-							color:#fff;
-							padding:0 1px;
-						}
-					}
-					.byline{
-
-					}
-						.author{
-
-						}
-					.entry-date{
-						
-					}
-				}
 		.read-more{
 			margin:13px 0;
+			@include md-max{
+				margin:0 0 11px;
+			}
 		}	
 
 	}

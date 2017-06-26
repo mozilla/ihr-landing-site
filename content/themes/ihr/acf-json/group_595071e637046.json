@@ -1,0 +1,46 @@
+{
+    "key": "group_595071e637046",
+    "title": "Blog Page",
+    "fields": [
+        {
+            "post_type": [
+                "post"
+            ],
+            "taxonomy": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "object",
+            "ui": 1,
+            "key": "field_595071ef9c8af",
+            "label": "Feature Posts",
+            "name": "feature_posts",
+            "type": "post_object",
+            "instructions": "select 1-3 posts",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            }
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "2"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1498445373
+}

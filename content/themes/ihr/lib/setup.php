@@ -139,5 +139,9 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+
+   //creates ihr.ajaxurl variable that's used in main.js
+  wp_localize_script('sage/js', 'ihr', apply_filters('sage_localize_script', array()));
+
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
