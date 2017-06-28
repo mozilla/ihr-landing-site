@@ -13,7 +13,7 @@ if( $post_objects ): ?>
 			<?php the_post_thumbnail('medium_large'); ?>
 
 			<div class="copy">
-			<h2><?php the_title(); ?></h2>
+			<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
 			<?php get_template_part('templates/entry-meta'); ?>
 			

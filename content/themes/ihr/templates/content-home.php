@@ -36,15 +36,17 @@ if( have_rows('feature_pages') ): ?>
 			$image = get_sub_field('image');
 			$size = 'medium';
 
-			if( !empty($image) ) {
-
-				echo wp_get_attachment_image( $image, $size );
+			if( !empty($image) ) { ?>
+				<a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>>
+				<?php echo wp_get_attachment_image( $image, $size ); ?>
+				</a>
+			<?php
 			}
 			?>
 
 			<div class="copy">
 
-				<h2><?php the_sub_field('title'); ?></h2>
+				<h2><a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('title'); ?></a></h2>
 				<p><?php the_sub_field('excerpt'); ?> test</p>
 			</div>
 			<a class="read-more button" href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('cta_text'); ?></a>

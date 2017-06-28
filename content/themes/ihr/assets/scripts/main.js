@@ -20,6 +20,19 @@
 			action_load_posts: 'ajax_load_posts',
 			init: function() {
 				// JavaScript to be fired on all pages
+				console.log($(".single-post-container").height(), $(".single-post-container").offset().top);
+				//var jsShareDistance = $(".single-post-container").height() + $(".single-post-container").offset().top - $(".js-share").offset().top;
+				var jsShareDistance = $(".single-post-container").height() - $(".js-share").offset().top;
+				$(document).scroll(function() {
+					if ($(document).scrollTop() > jsShareDistance){
+						$(".js-share").addClass("is-fixed-bottom");
+					}else{
+						$(".js-share").removeClass("is-fixed-bottom");
+					}
+					//console.log($(document).scrollTop());
+				})
+
+
 			},
 			finalize: function() {
 				// JavaScript to be fired on all pages, after page specific JS is fired
