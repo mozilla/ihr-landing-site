@@ -1,9 +1,6 @@
 <?php while (have_posts()) : the_post(); ?>
 
 
-
-
-
 	<article class="single-post-container">
 		<header>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -16,8 +13,6 @@
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>
-
-
 
 
 
@@ -46,14 +41,17 @@
 				);
 
 	$post_objects = get_posts($args);
-
-
+	global $hideCommentLink;
+	$hideCommentLink = true;
 	if( $post_objects ): ?>
 
 		<div class="featured-blog-posts">
 
 			<h3 class="bar">related posts</h3>
 
+			<?php 
+			//only add slick wrapper if there is more than one post
+			echo (count($post_objects) > 1 ? '<div class="slick-posts">' : ''); ?>
 			<?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
 				<?php setup_postdata($post); ?>
 				
@@ -61,7 +59,7 @@
 
 
 			<?php endforeach; ?>
-
+			<?php echo (count($post_objects) > 1 ? '</div>' : ''); ?>
 		
 		</div>
 

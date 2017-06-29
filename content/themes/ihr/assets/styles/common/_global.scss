@@ -5,19 +5,23 @@ body#tinymce {height:auto !important;
 
 
 //used for js resizing instead of windowWidth
-#desktop-sized,
 #tablet-sized{
-	width:1px;height:1px;
+  display: none;
+  @include lg-max{
+    display: block;
+    height:1px;width:1px;
+    position:fixed;
+    bottom:0;
+  }
 }
-@include md-max{
-	#desktop-sized{
-		display: none;
-	}
-}
-@include sm-max{
-	#tablet-sized{
-		display: none;
-	}
+#mobile-sized{
+  display: none;
+  @include md-max{
+    display: block;
+    height:1px;width:1px;
+    position:fixed;
+    bottom:0;
+  }
 }
 
 
@@ -132,9 +136,9 @@ p{
 }
 form{
   font-size:16px;
-  @include font();
+  @include font('opensans');
 }
-input{
+input,textarea{
 	font-size:16px;
 	margin:0;
 	@include font('opensans');

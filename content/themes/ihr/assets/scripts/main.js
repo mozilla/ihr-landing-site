@@ -1,3 +1,14 @@
+;var IHR = window.IHR || {};
+IHR.settings = IHR.settings || {};
+
+IHR.settings = {
+
+	jsShareDistance:null
+
+};
+
+
+
 /* ========================================================================
  * DOM-based Routing
  * Based on http://goo.gl/EUTi53 by Paul Irish
@@ -9,8 +20,31 @@
  * The routing is enclosed within an anonymous function so that you can
  * always reference jQuery with $, even when in .noConflict() mode.
  * ======================================================================== */
-
 (function($) {
+
+	IHR.windowResize = function(){
+
+		IHR.elementSetup();
+
+	}
+
+	IHR.elementSetup = function(){
+
+		if ($(".single-post-container").length){
+			IHR.settings.jsShareDistance = $(".single-post-container").height() - $(".main.container").offset().top;
+		}
+
+		if (!$("#mobile-sized").is(":visible")){
+			if ($('.slick-posts').hasClass("slick-initialized")){
+				$(".slick-posts").slick("unslick");
+			}
+		}else{
+			$(".slick-posts").slick("init");	
+		}
+
+
+
+	}
 
 	// Use this variable to set up the common and page specific functions. If you
 	// rename this variable, you will also need to rename the namespace below.
@@ -20,17 +54,32 @@
 			action_load_posts: 'ajax_load_posts',
 			init: function() {
 				// JavaScript to be fired on all pages
-				console.log($(".single-post-container").height(), $(".single-post-container").offset().top);
-				//var jsShareDistance = $(".single-post-container").height() + $(".single-post-container").offset().top - $(".js-share").offset().top;
-				var jsShareDistance = $(".single-post-container").height() - $(".js-share").offset().top;
-				$(document).scroll(function() {
-					if ($(document).scrollTop() > jsShareDistance){
-						$(".js-share").addClass("is-fixed-bottom");
-					}else{
-						$(".js-share").removeClass("is-fixed-bottom");
-					}
-					//console.log($(document).scrollTop());
-				})
+
+				if ($(".single-post-container").length){
+					$(document).scroll(function() {
+						if ($(document).scrollTop() > IHR.settings.jsShareDistance){
+							$(".js-share").addClass("is-fixed-bottom");
+						}else{
+							$(".js-share").removeClass("is-fixed-bottom");
+						}
+					})					
+				}
+
+
+				$(".slick-posts").slick({
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					infinite:false,
+					dots: true,
+					arrows:false,
+					centerMode: true,
+					centerPadding: 0,
+					focusOnSelect: true,
+				});
+
+
+				//has to be after slick
+				IHR.elementSetup();
 
 
 			},
@@ -171,3 +220,12 @@
 	$(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
+
+
+jQuery(window).resize(function() {
+  
+  //slow down functions called on resize
+  clearTimeout(IHR.resizer);
+  IHR.resizer = setTimeout(IHR.windowResize, 200);
+
+});

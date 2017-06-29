@@ -75,3 +75,7 @@
 
 
 </footer>
+
+
+<div id="tablet-sized"></div>
+<div id="mobile-sized"></div>

@@ -25,4 +25,16 @@
 	<span class="byline"><span class="author vcard"><?php echo get_the_author(); ?></span></span> <span class="pipe">|</span> 
 	<?php echo $time_string; 
 	//<time class="entry-date published" datetime="2008-10-17T04:33:51+00:00">October 17, 2008</time>?>
+	<?php
+	global $hideCommentLink;//only set on related posts on single page
+	if (is_single() && $hideCommentLink !== true){
+		?>
+		 <span class="pipe">|</span>
+		<a href="<?php comments_link(); ?>">
+		<?php
+		comments_number( 'comments', 'one comment', '% comments' ); ?>
+		</a>
+		<?php
+	}
+	?>
 </div>

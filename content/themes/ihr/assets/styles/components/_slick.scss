@@ -1,0 +1,80 @@
+
+/* Dots */
+$slick-font-path: "../../bower_components/slick-carousel/slick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "../../bower_components/slick-carousel/slick/" !default;
+$slick-arrow-color: white !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-prev-character: "\2190" !default;
+$slick-next-character: "\2192" !default;
+$slick-dot-character: "\2022" !default;
+
+$slick-opacity-default: 1 !default;
+$slick-opacity-on-hover: .8 !default;
+$slick-opacity-not-active: 0.40 !default;
+.slick-slider{
+	margin:0;
+	padding:0 0 20px;
+	@include md-max{
+		margin:0 0 10px;
+	}
+}
+.slick-dotted.slick-slider {
+    margin-bottom: 55px;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom:20px;
+    list-style: none;
+    display: block;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    li {
+        position: relative;
+        display: inline-block;
+        height: 14px;
+        width: 14px;
+        margin: 0 7px;
+        padding: 0;
+        cursor: pointer;
+        button {
+            border: 0;
+            background: transparent;
+            display: block;
+            height: 14px;
+            width: 14px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            padding: 5px;
+            cursor: pointer;
+            &:hover, &:focus {
+                outline: none;
+                &:before {
+                    opacity: $slick-opacity-on-hover;
+                }
+            }
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include border-radius(50%);
+                width: 14px;
+                height: 14px;
+                line-height: 20px;
+                text-align: center;
+                border:1px solid $slick-dot-color;
+            }
+        }
+        &.slick-active button:before {
+            background-color: $slick-dot-color-active;
+
+        }
+    }
+}

@@ -1,10 +1,21 @@
 {
-  "name": "sage",
-  "homepage": "https://roots.io/sage/",
+  "name": "Internet Health Report",
   "authors": [
-    "Ben Word <ben@benword.com>"
+    "Mike <mikezanni@gmail.com>"
   ],
   "license": "MIT",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "viewport-units-buggyfill": "~0.5.5",
+    "slick-carousel": "~1.5.9"
+  },
+  "overrides": {
+    "slick-carousel": {
+      "main": [
+        "./slick/slick.min.js",
+        "./slick/slick.css",
+        "./slick/fonts/*"
+      ]
+    }
+  }
 }
