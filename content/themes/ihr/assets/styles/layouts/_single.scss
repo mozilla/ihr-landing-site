@@ -7,7 +7,9 @@
 	max-width:608px;
 	margin:41px auto 108px;
 	position:relative;
-
+	@include md-max{
+		margin:33px auto 60px;
+	}
 	.share{
 		position:fixed;
 		left:50%;
@@ -49,14 +51,22 @@
 		max-width:100%;
 		height:auto;
 	}
-	p:first-child{
-		font-size:24px;
-		line-height:32px;
+	.entry-content:first-of-type{
+
+		p:first-child{
+			font-size:24px;
+			line-height:32px;
+			@include md-max{
+				font-size:18px;
+				line-height:24px;
+				font-weight:500;
+			}
+		}
 	}
 }
 
 .single-post-extras{
-	margin:43px 0 0;
+	padding:43px 0 0;
 	position:relative;
 	&:before{
 		content:'';

@@ -59,13 +59,15 @@
 			}
 			li{
 				display:inline-block;
-				margin:0 25px 7px 0;
+				margin:0 22px 7px 0;
 				@include md-max{
 					margin:0 5px 7px;
 				}
 
 				a{
 					color:#000;
+					font-size:16px;
+					letter-spacing: .5px;
 				}
 				&.selected{
 					a{
@@ -104,10 +106,137 @@
 				bottom:0;
 				padding:0 0 6px;
 				span{
-					font-size:21px;
+					font-size:17px;
 				}
 			}
 		}
 	}
 
 }
+
+
+
+.page-template-template-about{
+	.single-post-container{
+		margin-top:50px;
+		h1,h2{
+			font-size:28px;
+			line-height: 1.14
+		}
+	}
+}
+
+
+.roadmap-container{
+
+	margin:55px 0 60px;
+
+	.roadmap{
+		position:relative;
+		margin:31px 0 0 1px;
+		@include md-max{
+			margin:22px 0 0 1px;
+		}
+
+		&:before{
+			content:'';
+			position:absolute;
+			top:0;
+			bottom:0;
+			width:1px;
+			background:#000;
+			left:116px;
+			@include md-max{
+				display:none;
+			}
+		}
+
+		.roadmap-item{
+			display:table;
+			margin:0 0 25px;
+			&.first{
+				.copy div:before{
+					content: "";
+					width: 9px;
+					background: #fff;
+					position: absolute;
+					left: 33px;
+					top: 0;
+					bottom: 50%;
+					@include md-max{
+						display:none;
+					}
+				}
+			}
+			&.last{
+				.copy div:before{
+					content: "";
+					width: 9px;
+					background: #fff;
+					position: absolute;
+					left: 33px;
+					top: 50%;
+					bottom: 0;
+					@include md-max{
+						display:none;
+					}
+				}
+			}
+			&.selected{
+				.copy div:after{
+					background:#000;
+				}
+			}
+		}
+			.date{
+				width: 79px;
+				font-size: 14px;
+				text-transform:uppercase;
+				line-height: 1.71;
+				display:table-cell;
+				vertical-align:middle;
+				text-align:right;
+				@include md-max{
+					color:#adadad;
+					display:block;
+					text-align:left;
+				}
+			}
+			.copy{
+				width: 507px;
+				font-size: 20px;
+				line-height: 1.4;
+				display:table-cell;
+				vertical-align:middle;
+				@include md-max{
+					display:block;
+					width:100%;
+					font-size:18px;
+					line-height:1.22;
+				}
+				div{
+					padding:0 0 0 81px;
+					position:relative;
+					@include md-max{
+						padding:0;
+					}
+					&:after{
+						content:'';
+						@include border-radius(50%);
+						border:1px solid #000;
+						width:9px;
+						height:9px;
+						background:#fff;
+						position:absolute;
+						left:32px;
+						top:50%;
+						margin:-5px 0 0;
+						@include md-max{
+							display:none;
+						}
+					}
+				}
+			}
+	}
+}
+

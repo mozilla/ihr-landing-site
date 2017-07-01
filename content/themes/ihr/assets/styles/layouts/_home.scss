@@ -1,5 +1,3 @@
-.home-about{
-
 
 
 	.hero{
@@ -28,18 +26,18 @@
 				}
 			}
 		}
-	}
 
 
-	h1{
-		font-size:52px;
-		line-height:1;
-		margin:7px 0 7px;
-		@include md-max{
-			font-size:38px;
+		h1{
+			font-size:52px;
+			line-height:1;
+			margin:7px 0 7px;
+			@include md-max{
+				font-size:38px;
+			}
 		}
-	}
 
+	}
 
 
 	.feature-pages{
@@ -58,15 +56,17 @@
 			padding:0 0 10px;
 			margin:0 0 32px;
 		}
+		&.underline{
 
-		&:after{
-			content:'';
-			width: 100%;
-			height: 4px;
-			bottom:0;
-			position:absolute;
-			display:block;
-			@include gradient-underline();
+			&:after{
+				content:'';
+				width: 100%;
+				height: 4px;
+				bottom:0;
+				position:absolute;
+				display:block;
+				@include gradient-underline();
+			}
 		}
 	}
 		.feature{
@@ -82,6 +82,33 @@
 				margin-left:30px;
 				@include md-max{
 					margin-left:0;
+				}
+			}
+			a{
+				position:relative;
+				display:block;
+				.year{
+					position:absolute;
+					left:35px;
+					bottom:107px;
+					z-index: 2;
+					font-size:24px;
+					font-family: 'Zilla Slab Highlight';
+					color:#fff;
+
+					@include lg-max{
+						bottom:24px;
+					}
+
+					&:before{
+						content: "";
+						left: -35px;
+						top: -5px;
+						background: #fff;
+						height: 27px;
+						width: 35px;
+						position: absolute;
+					}
 				}
 			}
 			img{
@@ -133,7 +160,7 @@
 
 	.featured-blog-posts{
 
-		margin:0 0 58px;
+		//margin:0 0 58px;
 
 		@include md-max{
 			margin:0 0 33px;
@@ -155,6 +182,3 @@
 		}	
 
 	}
-
-
-}

@@ -87,42 +87,42 @@ IHR.settings = {
 				// JavaScript to be fired on all pages, after page specific JS is fired
 			},
 			load_posts: function (pTopicsFilter, pOffset) {
-		        Sage.common.loading = true;
-		        var itemCountReturned;
+				Sage.common.loading = true;
+				var itemCountReturned;
 
-		        if (pOffset === 0) {
-		          // only clear current contents if the offset is 0 because otherwise we are loading more
-		          $('.loader').removeClass('all-posts-loaded');
+				if (pOffset === 0) {
+				  // only clear current contents if the offset is 0 because otherwise we are loading more
+				  $('.loader').removeClass('all-posts-loaded');
 
-		          $('#posts-wrap').empty();
-		        }
+				  $('#posts-wrap').empty();
+				}
 
-		        $('.loader').addClass('loading');
-		        var data = {
-		          action: Sage.common.action_load_posts,
-		          topics_filter: pTopicsFilter,
-		          post_offset: pOffset
-		        };
+				$('.loader').addClass('loading');
+				var data = {
+				  action: Sage.common.action_load_posts,
+				  topics_filter: pTopicsFilter,
+				  post_offset: pOffset
+				};
 
-		        $.get(ihr.ajaxurl, data, function (html) {
-		          //console.log(data,html);
-		          itemCountReturned = $(html).filter(".entry-container").length;
-		          if (html === '') {
-		            $('.loader').addClass('all-posts-loaded');
-		          } else {
-		            $('#posts-wrap').append(html);
+				$.get(ihr.ajaxurl, data, function (html) {
+				  //console.log(data,html);
+				  itemCountReturned = $(html).filter(".entry-container").length;
+				  if (html === '') {
+					$('.loader').addClass('all-posts-loaded');
+				  } else {
+					$('#posts-wrap').append(html);
 
-		          }
-		          $('.loader').removeClass('loading');
-		          Sage.common.loading = false;
+				  }
+				  $('.loader').removeClass('loading');
+				  Sage.common.loading = false;
 
 
-		          if (itemCountReturned < 10) {
-		            $('.loader').addClass('all-posts-loaded');
-		          }
-		        });
+				  if (itemCountReturned < 10) {
+					$('.loader').addClass('all-posts-loaded');
+				  }
+				});
 
-		      }
+			  }
 		},
 		// Home page
 		'home': {
@@ -181,6 +181,31 @@ IHR.settings = {
 					}
 
 				});
+
+				$(".search-form").submit(function(e){
+
+					var url = "/"; // the script where you handle the form input.
+					var $that = $(this);
+
+					$('#posts-wrap').empty();
+					$('.loader').addClass('loading');
+								$('.loader').addClass('all-posts-loaded');
+
+					$.ajax({
+						   type: "POST",
+						   url: url,
+						   data: $that.serialize(), // serializes the form's elements.
+						   success: function(data)
+						   {
+
+								$('.loader').removeClass('loading');
+								$('#posts-wrap').append($(data).find(".main.container").html());
+						   }
+					});
+
+					e.preventDefault(); // avoid to execute the actual submit of the form.
+				});
+				
 
 			}
 		}

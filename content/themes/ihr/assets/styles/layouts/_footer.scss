@@ -1,6 +1,6 @@
 .newsletter-signup{
 	background:#f1f1f1;
-	padding:50px 0;
+	padding:46px 0 43px;
 	@include md-max{
 		padding:29px 0 21px;
 	}
@@ -31,7 +31,8 @@
 	.signup-form{
 
 		float:right;
-		max-width:466px;
+		max-width:451px;
+		margin:5px 0 0;
 
 
 		@include lg-max{
@@ -51,7 +52,7 @@
 	}
 
 		.signup-form__email{
-			width:314px;
+			width:331px;
 			color: #000;
 			-webkit-appearance: none;
 			-moz-appearance: none;
@@ -60,7 +61,10 @@
 			border-radius: 0;
 			background: #fff;
 			float:left;
-			padding:12px 20px;
+			padding:8px 14px;
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
 			@include lg-max{
 				width: 47%;
 				min-width: 137px;
@@ -69,9 +73,6 @@
 				float:none;
 				width:100%;
 				min-width:100%;
-				box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				-webkit-box-sizing: border-box;
 			}
 		}
 		
@@ -88,7 +89,7 @@
 			color:#fff;
 			background:#48c7ff;
 			border:0;
-			padding:12px 15px 11px;
+			padding:8px 15px 8px 22px;
 
 			position: absolute;
 
@@ -128,6 +129,7 @@
 			display:inline-block;
 			vertical-align: middle;
 			width: 92%;
+			@include font();
 			a{
 				color:#000;
 				text-decoration:underline;
@@ -151,7 +153,7 @@
 	}
 
 	.link-list{
-		margin:0 0 37px;
+		margin:0 0 21px;
 		@include md-max{
 			-webkit-column-count: 2;
 			-moz-column-count: 2;
@@ -164,7 +166,7 @@
 			column-gap: 10px;
 		}
 		a{
-			margin:0 15px 15px;
+			margin:0 14px 15px;
 			vertical-align:top;
 			color:#fff;
 			display:inline-block;
@@ -186,7 +188,7 @@
 		background:url(../images/mozilla-logo-white.svg) no-repeat;
 		display:inline-block;
 		vertical-align:middle;
-		margin:0 20px 0 0;
+		margin:0 16px 0 35px;
 		@include md-max{
 			margin:0 0 15px;
 

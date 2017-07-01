@@ -22,7 +22,7 @@
 <?php
 if( have_rows('feature_pages') ): ?>
 
-<div class="feature-pages">
+<div class="feature-pages underline">
 
 	<?php
 	$i=1;
@@ -47,7 +47,7 @@ if( have_rows('feature_pages') ): ?>
 			<div class="copy">
 
 				<h2><a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('title'); ?></a></h2>
-				<p><?php the_sub_field('excerpt'); ?> test</p>
+				<p><?php the_sub_field('excerpt'); ?></p>
 			</div>
 			<a class="read-more button" href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('cta_text'); ?></a>
 
