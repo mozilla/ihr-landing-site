@@ -86,7 +86,7 @@ if( $post_objects ): ?>
 	</div>
 
 	<div class="loader">
-		<div class="read-more load-more">Load more blog posts</div>
+		<div class="read-more load-more"><?php _e('Load more blog posts','ihr'); ?></div>
 		<div class="spinner"></div>
 	</div>
 	

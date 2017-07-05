@@ -70,7 +70,7 @@ endif; ?>
 <?php
 if( have_rows('feature_reports') ): ?>
 
-<h3 class="bar">archive of reports</h3>
+<h3 class="bar"><?php _e('archive of reports','ihr'); ?></h3>
 
 
 

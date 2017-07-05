@@ -1,0 +1,71 @@
+# Copyright (C) 2017 ihr
+# This file is distributed under the same license as the ihr package.
+msgid ""
+msgstr ""
+"Project-Id-Version: ihr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/content-about.php:73
+msgid "archive of reports"
+msgstr ""
+
+#: templates/content-blog.php:89
+msgid "Load more blog posts"
+msgstr ""
+
+#: templates/footer.php:8
+msgid "Join our newsletter"
+msgstr ""
+
+#: templates/footer.php:10
+msgid "Keep up with the latest Internet Health news."
+msgstr ""
+
+#: templates/footer.php:22
+msgid "Email address"
+msgstr ""
+
+#: templates/footer.php:28
+msgid "I’m okay with mozilla handling my info as explained in this <a href=\"https://www.mozilla.org/privacy/websites/\">privacy notice</a>."
+msgstr ""
+
+#: templates/footer.php:34
+msgid "Join us"
+msgstr ""
+
+#: templates/footer.php:58
+msgid "Contact"
+msgstr ""
+
+#: templates/footer.php:59
+msgid "License"
+msgstr ""
+
+#: templates/footer.php:61
+msgid "Community"
+msgstr ""
+
+#: templates/footer.php:63
+msgid "Legal"
+msgstr ""
+
+#: templates/footer.php:64
+msgid "Privacy"
+msgstr ""
+
+#: templates/footer.php:66
+msgid "Rss"
+msgstr ""
+
+#: templates/footer.php:73
+msgid "We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href=\"http://mozilla.org\">mozilla.org</a>"
+msgstr ""
