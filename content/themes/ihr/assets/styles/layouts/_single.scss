@@ -5,10 +5,10 @@
 
 .single-post-container{
 	max-width:608px;
-	margin:41px auto 108px;
+	margin:46px auto 108px;
 	position:relative;
 	@include md-max{
-		margin:33px auto 60px;
+		margin:20px auto 60px;
 	}
 	.share{
 		position:fixed;
@@ -50,17 +50,67 @@
 		margin:30px 0;
 		max-width:100%;
 		height:auto;
+		@include md-max{
+			margin:22px 0;
+		}
 	}
-	.entry-content:first-of-type{
+	.entry-title{
+		@include md-max{
+			margin:22px 0 13px;
+		}
+	}
+	.entry-content{
 
-		p:first-child{
-			font-size:24px;
-			line-height:32px;
+		iframe{
+			width:100%;
+			min-height: 341px;
 			@include md-max{
-				font-size:18px;
-				line-height:24px;
-				font-weight:500;
+				min-height: 53vw;
 			}
+		}
+
+		blockquote{
+			position:relative;
+			padding:59px 0 0 24px;
+			margin:0 0 30px;
+			font-size:24px;
+			font-weight:400;
+			line-height:1.33;
+			font-style:italic;
+
+			&:before{
+				content: "\e909";
+				@include icomoon();
+				position:absolute;
+				top:17px;
+				left:0;
+				color:#f3f3f3;
+				font-size:78px;
+				z-index:-1;
+			}
+			
+			p,
+			&:first-of-type{
+				p:first-child{
+					font-size:24px;
+					line-height:1.33;
+					font-weight:400;
+				}
+
+			}
+		}
+
+		&:first-of-type{
+			p:first-child{
+				font-size:24px;
+				line-height:32px;
+				@include md-max{
+					font-size:18px;
+					line-height:24px;
+					font-weight:500;
+				}
+			}
+
 		}
 	}
 }

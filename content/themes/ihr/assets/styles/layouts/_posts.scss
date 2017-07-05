@@ -59,6 +59,9 @@
 
 
 .entry-meta{//used in features and blog listing
+	@include md-max{
+		line-height: 26px;
+	}
 	.pipe{
 		margin:0 5px;
 	}
