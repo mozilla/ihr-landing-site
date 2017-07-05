@@ -3,10 +3,14 @@
 
 	.container{
 		
-		overflow:hidden;
+		//overflow:hidden;
+		height:95px;
 		position:relative;
 		padding:0 0 6px;
-
+		@include md-max{
+			height:auto;
+			overflow:hidden;//only because wpml widget is now position:fixed
+		}
 
 		.brand{
 			height:55px;
@@ -72,6 +76,74 @@
 			position:absolute;
 			display:block;
 			@include gradient-underline();
+		}
+
+
+		.widget{
+			position: absolute;
+			right: 0;
+			top: 38px;
+			@include font(opensans);
+			@include md-max{
+				top:6px;
+				position:fixed;
+				right:10px;
+			}
+
+			.wpml-ls-legacy-dropdown{
+				width:159px;
+				@include menu-max{
+					width:104px;
+				}
+				a{
+					font-size:16px;
+					padding:8px 10px;
+					border:1px solid #000;
+					@include md-max{
+						border:none;
+						padding:8px 18px 8px 5px;
+						font-size:14px;
+						text-align:right;
+					}
+					&.wpml-ls-item-toggle{
+						&:before{
+							content: '';
+							width:10px;
+							height:3px;
+							border:none;
+							position: absolute;
+							right: 15px;
+							background:#000;
+							top: 17px;
+							@include rotation(45deg);
+							@include md-max{
+								right:5px;
+							}
+						}
+						&:after{
+							content: '';
+							width:10px;
+							height:3px;
+							border:none;
+							position: absolute;
+							right: 10px;
+							background:#000;
+							top: 17px;
+							@include rotation(-45deg);
+							@include md-max{
+								right:0;
+							}
+						}
+					}
+				}
+			}
+			.wpml-ls-sub-menu{
+
+				a{
+					border-top:0;
+				}
+			}
+
 		}
     }
 }

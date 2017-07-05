@@ -9,6 +9,9 @@
       ?>
     </nav>
 
+
+    <?php dynamic_sidebar('topbar-primary'); ?>
+
     <?php
     // insert wpml dropdown here
     /*
