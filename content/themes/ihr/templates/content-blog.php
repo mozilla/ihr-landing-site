@@ -25,9 +25,9 @@ if( $post_objects ): ?>
 			</div>
 		</div>
 
-		<?php endforeach; ?>
-
 	</div>
+
+	<?php endforeach; ?>
 
 	<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif;

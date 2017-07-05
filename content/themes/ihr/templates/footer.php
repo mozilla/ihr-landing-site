@@ -55,19 +55,23 @@
 
 		<div class="link-list">
 
-			<a href=""><span class="icon-mail"></span>Email</a>
-			<a href=""><span class="icon-cc"></span>License</a>
-			<a href=""><span class="icon-conduct"></span>Code of Conduct</a>
-			<a href=""><span class="icon-legal"></span>Legal</a>
-			<a href=""><span class="icon-privacy"></span>Privacy</a>
-			<a href=""><span class="icon-cookies"></span>Cookies</a>
+			<a href="mailto:internethealth@mozillafoundation.org"><span class="icon-mail"></span><?php _e('Contact','ihr'); ?></a>
+			<a href="https://www.mozilla.org/foundation/licensing/website-content/"><span class="icon-cc"></span><?php _e('License','ihr'); ?></a>
+
+			<a href="https://www.mozilla.org/about/governance/policies/participation/"><span class="icon-conduct"></span><?php _e('Community','ihr'); ?></a>
+			<?php //<a href=""><span class="icon-conduct"></span>Code of Conduct</a> ?>
+			<a href="https://www.mozilla.org/about/legal/terms/mozilla/"><span class="icon-legal"></span><?php _e('Legal','ihr'); ?></a>
+			<a href="https://www.mozilla.org/privacy/websites/"><span class="icon-privacy"></span><?php _e('Privacy','ihr'); ?></a>
+			<?php //<a href=""><span class="icon-cookies"></span>Cookies</a> ?>
+			<a href="/feed/"><span class="icon-rss"></span><?php _e('Rss','ihr'); ?></a>
 
 		</div>
 
 
 		<a class="logo" href="http://mozilla.org"></a>
 
-		<div class="statement">We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="http://mozilla.org">mozilla.org</a>
+		<div class="statement"><?php _e('We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="http://mozilla.org">mozilla.org</a>','ihr'); ?>
+		</div>
 
 	</div>
 </div>

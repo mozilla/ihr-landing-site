@@ -4,13 +4,12 @@
 <div class="hero" style="background-image:url(<?php the_field('hero_background'); ?>)">
 	<div class="cell">
 		<div class="copy">
-		<h1>Internet Health Report</h1>
+		<h1><?php the_title(); ?></h1>
 
-		<?php //the_content(); ?>
-		<p>An open source initiative to document and explain what’s happening to the health of the Internet combining research from multiple sources.</p>
+		<?php the_content(); ?>
 		
 
-		<a class="read-more" href="">Read More</a>
+		<a class="read-more" href="/about/"><?php _e('Read More'); ?></a>
 		</div>
 	</div>
 
@@ -75,7 +74,7 @@ if( $post_objects ): ?>
 
 	<div class="featured-blog-posts">
 
-		<h3 class="bar">featured blog posts</h3>
+		<h3 class="bar"><?php _e('featured blog posts'); ?></h3>
 
 		<?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
 			<?php setup_postdata($post); ?>
@@ -84,7 +83,7 @@ if( $post_objects ): ?>
 
 		<?php endforeach; ?>
 
-		<a class="read-more" href="/blog/">View all blog posts</a>
+		<a class="read-more" href="/blog/"><?php _e('View all blog posts'); ?></a>
 
 	</div>
 

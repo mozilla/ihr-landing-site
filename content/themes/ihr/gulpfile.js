@@ -19,6 +19,8 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var wpPot        = require('gulp-wp-pot');
+var sort         = require('gulp-sort');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -293,4 +295,18 @@ gulp.task('wiredep', function() {
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
+});
+
+
+// ### Pot
+// `gulp pot` - Run gulp wp pot to create pot file and put it in lang directory.
+gulp.task('pot', function(callback) {
+  return gulp.src(['*.php', 'templates/*.php', 'lib/*.php'])
+        .pipe(sort())
+        .pipe(wpPot( {
+            domain: 'ihr',
+            destFile:'ihr.pot',
+            package: 'ihr',
+        } ))
+        .pipe(gulp.dest('lang'));
 });

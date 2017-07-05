@@ -67,38 +67,69 @@ endif; ?>
 
 
 
+<?php
+if( have_rows('feature_reports') ): ?>
+
 <h3 class="bar">archive of reports</h3>
-<div class="feature-pages">
 
+
+
+	<?php
+	$i=1;
+	$my_fields = get_field_object('feature_reports');
+	$count = (count($my_fields['value']));
+
+	while ( have_rows('feature_reports') ) : the_row();
 	
-		<div class="feature">
+	if ($i%2 == 1){ ?>
 
-				<a href="" target="_blank"><div class="year">2017</div>
-				<img width="450" height="253" src="//localhost:3000/content/uploads/2017/06/report-1-450x253.jpg" class="attachment-medium size-medium" alt="" srcset="//localhost:3000/content/uploads/2017/06/report-1-450x253.jpg 450w, //localhost:3000/content/uploads/2017/06/report-1-290x163.jpg 290w, //localhost:3000/content/uploads/2017/06/report-1-900x506.jpg 900w, //localhost:3000/content/uploads/2017/06/report-1.jpg 1220w" sizes="(max-width: 450px) 100vw, 450px">				</a>
-			
+	<div class="feature-pages">
+
+	<?php
+	}
+	?>
+
+		<div class="feature<?php echo ($i%2 == 0 ? ' right' : '');?>">
+
+			<?php
+			$image = get_sub_field('image');
+			$size = 'medium';
+
+			if( !empty($image) ) { ?>
+				<a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>>
+				<?php if (get_sub_field('year')): ?>
+					<div class="year"><?php the_sub_field('year'); ?></div>
+				<?php endif; ?>
+				<?php echo wp_get_attachment_image( $image, $size ); ?>
+				</a>
+			<?php
+			}
+			?>
+
 			<div class="copy">
 
-				<h2><a href="" target="_blank">Read our entire Report v0.1</a></h2>
-				<p>Welcome to our new open source initiative to document and explain what’s happening to the health of the Internet combining research from multiple sources.</p>
+				<h2><a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('title'); ?></a></h2>
+				<p><?php the_sub_field('excerpt'); ?></p>
 			</div>
-			<a class="read-more button" href="" target="_blank">Read report</a>
+			<a class="read-more button" href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('cta_text'); ?></a>
 
 		</div>
 
-	
-		<div class="feature right">
+	<?php
 
-				<a href=""><div class="year">2016</div>
-				<img width="450" height="253" src="//localhost:3000/content/uploads/2017/06/feedback-450x253.jpg" class="attachment-medium size-medium" alt="" srcset="//localhost:3000/content/uploads/2017/06/feedback-450x253.jpg 450w, //localhost:3000/content/uploads/2017/06/feedback-290x163.jpg 290w, //localhost:3000/content/uploads/2017/06/feedback.jpg 900w" sizes="(max-width: 450px) 100vw, 450px">				</a>
-			
-			<div class="copy">
+	if ($i%2 == 0 || $count == $i){ ?>
 
-				<h2><a href="">Help us pick indicators for the next Report</a></h2>
-				<p>By documenting and explaining what is healthy, as well as unhealthy, we can take positive steps around the world to make it better. </p>
-			</div>
-			<a class="read-more button" href="">See indicators</a>
+	</div>
 
-		</div>
+	<?php
+	}
 
-	
+	$i++;
+	endwhile;
+	?>
+
 </div>
+
+<?php
+endif;
+?>
