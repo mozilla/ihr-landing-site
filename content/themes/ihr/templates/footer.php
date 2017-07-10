@@ -13,7 +13,7 @@
 
 		<form id="newsletter_form" class="signup-form" name="newsletter_form" action="https://www.mozilla.org/en-US/newsletter/" method="post">
 			<input type="hidden" id="fmt" name="fmt" value="H">
-			<input type="hidden" id="lang" name="lang" value="en">
+			<input type="hidden" id="lang" name="lang" value="<?php echo ICL_LANGUAGE_CODE ?>">
 			<input type="hidden" id="newsletters" name="newsletters" value="internet-health-report-group">
 
 			<div id="newsletter_errors" class="newsletter_errors"></div>
@@ -40,6 +40,7 @@
 
 		</form>
 
+		<p id="newsletter_thanks" class="signup-form__submission"><?php _e('Thanks for joining. Please check your inbox or your spam filter for an email confirmation from us.','ihr'); ?></p>
 
 
 

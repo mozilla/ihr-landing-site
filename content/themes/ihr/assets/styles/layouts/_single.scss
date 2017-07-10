@@ -1,6 +1,78 @@
 /*single posts*/
 
 
+//override hypothes.is styles
+.annotator-highlights-always-on .annotator-hl{
+	background:#d7d9f3!important;
+}
+
+.annotator-frame{
+	.annotator-toolbar{
+		top: 165px;
+
+		.annotator-frame-button{
+			background-color: #d7d9f3;
+			border:0;
+			height:34px;
+			width:34px;
+			@include border-radius(0);
+			border:0;
+			padding:0;
+			margin:0 0 2px;
+
+			&.h-icon-visibility:before{
+				content: "\e90c";
+				@include icomoon();
+			}
+			&.h-icon-note:before{
+				content: "\e90a";
+				@include icomoon();
+			}
+
+			&.annotator-frame-button--sidebar_toggle{
+				padding:0;
+				margin:0 0 2px;
+				&.h-icon-chevron-left:before{
+					content: "\e90b";
+					@include icomoon();
+				}
+			}
+		}
+	}
+	
+}
+
+
+body{
+	.annotator-frame .annotator-bucket-bar{
+		background:none;
+	}
+	.annotator-frame .annotator-bucket-indicator{
+		@include border-radius(0);
+		border:0;
+		background:none;
+	}
+	.annotator-frame .annotator-bucket-indicator .label{
+		background:#d7d9f3;
+		font-size:16px;
+		line-height:20px;
+		font-family:inherit;
+		padding:4px 0;
+		font-weight:500;
+	}
+	.annotator-frame .annotator-bucket-indicator:after {
+	border-width: 13px;
+	border-right: 8px solid #d7d9f3;
+	margin-top: -7px;
+	}
+	.annotator-frame .annotator-bucket-indicator:before {
+		border-right:0;
+	}
+	
+}
+
+
+
 
 
 .single-post-container{

@@ -30,7 +30,9 @@
 	if (is_single() && $hideCommentLink !== true){
 		?>
 		 <span class="pipe">|</span>
-		<a href="<?php comments_link(); ?>">
+		<a class="annotations-link" href="#"><?php _e('annotations','ihr'); ?></a>
+		 <span class="pipe">|</span>
+		<a class="comments-link" href="#<?php //comments_link(); ?>">
 		<?php
 		comments_number( 'comments', 'one comment', '% comments' ); ?>
 		</a>

@@ -139,7 +139,7 @@ form{
   font-size:16px;
   @include font('opensans');
 }
-input,textarea{
+input,textarea,select{
 	font-size:16px;
 	margin:0;
 	@include font('opensans');

@@ -30,7 +30,7 @@
 			margin:0 0 16px;
 		}
 	}
-	.signup-form{
+	.signup-form,.signup-form__submission{
 
 		float:right;
 		max-width:451px;
@@ -44,6 +44,9 @@
 			float:none;
 			max-width:100%;
 		}
+	}
+	.signup-form__submission{
+		display:none;
 	}
 	.form_group_email{
 		float:right;

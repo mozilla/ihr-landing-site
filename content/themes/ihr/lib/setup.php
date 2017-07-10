@@ -105,8 +105,26 @@ add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 /**
  * Theme assets
  */
+// Async load
+function mozilla_async_scripts($url) {
+  if ( strpos( $url, '#asyncload') === false ) {
+    return $url;
+  } else if (is_admin()) {
+    return str_replace( '#asyncload', '', $url );
+  } else {
+    return str_replace( '#asyncload', '', $url )."' async='async";
+  }
+}
+add_filter( 'clean_url', __NAMESPACE__ . '\\mozilla_async_scripts', 11, 1 );
+
+
 function assets() {
   wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+
+  // Disable wpDiscuz stylesheet
+  wp_dequeue_style('wpdiscuz-frontend-css');
+  wp_deregister_style('wpdiscuz-frontend-css');
+
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
@@ -114,8 +132,61 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
+  if (is_single()) {
+    wp_enqueue_script( 'hypothesis', 'https://hypothes.is/embed.js#asyncload', '', '', true);
+  }
+
    //creates ihr.ajaxurl variable that's used in main.js
   wp_localize_script('sage/js', 'ihr', apply_filters('sage_localize_script', array()));
 
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
+
+
+
+function add_opengraph_doctype( $output ) {
+  return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_filter('language_attributes', __NAMESPACE__ . '\\add_opengraph_doctype');
+
+function insert_og_tags_in_head() {
+  global $post;
+  if (!is_singular()) { return; }
+
+  echo '<meta name="twitter:card" content="summary_large_image" />';
+  echo '<meta name="twitter:site" content="@mozilla" />';
+  echo '<meta property="twitter:title" content="' . get_the_title() . '"/>';
+  echo '<meta property="twitter:description" content="' . get_bloginfo('description') . '"/>';
+
+  echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+  echo '<meta property="og:type" content="website"/>';
+  echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+  echo '<meta property="og:site_name" content="' . get_bloginfo('name') . '"/>';
+
+  if (!has_post_thumbnail( $post->ID )) {
+    /*
+    $front_page_ID = get_option( 'page_on_front' );
+    if(function_exists('get_field')) {
+      $shareImage = get_field('share_image', $front_page_ID);
+    }
+
+    if ($shareImage) {
+      $default_image = $shareImage;
+    } else {
+    }
+    */
+    $default_image = get_template_directory_uri() . '/dist/images/internet-health-report.jpg';
+
+    echo '<meta property="og:image" content="' . $default_image . '"/>';
+    echo '<meta property="twitter:image" content="' . $default_image . '"/>';
+  } else {
+    $thumbnail_src = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+    echo '<meta property="og:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+    echo '<meta property="twitter:image" content="' . esc_attr( $thumbnail_src[0] ) . '"/>';
+  }
+
+  echo "";
+}
+add_action( 'wp_head', __NAMESPACE__ . '\\insert_og_tags_in_head', 5 );
