@@ -1,0 +1,41 @@
+{
+    "key": "group_59644bb94ccf0",
+    "title": "Post Instructions",
+    "fields": [
+        {
+            "key": "field_59644c1e0b97a",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "To add a caption under a youtube video or an image in the post content, change to text view and paste  &lt;p class=\"wp-caption-text\"&gt;Image or video caption goes here.&lt;\/p&gt; beneath it.",
+            "new_lines": "",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1499746599
+}
