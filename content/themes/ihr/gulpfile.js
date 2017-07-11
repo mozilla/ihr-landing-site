@@ -218,6 +218,17 @@ gulp.task('fonts', function() {
     .pipe(browserSync.stream());
 });
 
+// ### Favicons
+// `gulp favicon` - Grabs all the favicon and outputs them in a flattened directory
+// structure. See: https://github.com/armed/gulp-flatten
+gulp.task('favicon', function() {
+  return gulp.src(globs.favicon)
+    .pipe(flatten())
+    .pipe(gulp.dest(path.dist + 'favicon'))
+    .pipe(browserSync.stream());
+});
+
+
 // ### Images
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {

@@ -7,6 +7,7 @@
 		height:95px;
 		position:relative;
 		padding:0 0 6px;
+		max-width:100%;
 		@include md-max{
 			height:auto;
 			overflow:hidden;//only because wpml widget is now position:fixed

@@ -238,7 +238,8 @@ IHR.settings = {
 				  $('#posts-wrap').empty();
 				}
 
-				$('.loader').addClass('loading');
+				$('.loader').addClass('loading').addClass('all-posts-loaded');
+
 				var data = {
 				  action: Sage.common.action_load_posts,
 				  topics_filter: pTopicsFilter,
@@ -260,6 +261,8 @@ IHR.settings = {
 
 				  if (itemCountReturned < 10) {
 					$('.loader').addClass('all-posts-loaded');
+				  }else{
+				  	$('.loader').removeClass('all-posts-loaded');
 				  }
 				});
 

@@ -14,12 +14,28 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: 404.php:10
+msgid "Uh Oh!"
+msgstr ""
+
+#: 404.php:12
+msgid "Sorry, the page does not exist."
+msgstr ""
+
+#: 404.php:15
+msgid "Go to home page"
+msgstr ""
+
 #: templates/content-about.php:73
 msgid "archive of reports"
 msgstr ""
 
 #: templates/content-blog.php:89
 msgid "Load more blog posts"
+msgstr ""
+
+#: templates/entry-meta.php:33
+msgid "annotations"
 msgstr ""
 
 #: templates/footer.php:8
@@ -42,30 +58,34 @@ msgstr ""
 msgid "Join us"
 msgstr ""
 
-#: templates/footer.php:58
-msgid "Contact"
+#: templates/footer.php:43
+msgid "Thanks for joining. Please check your inbox or your spam filter for an email confirmation from us."
 msgstr ""
 
 #: templates/footer.php:59
+msgid "Contact"
+msgstr ""
+
+#: templates/footer.php:60
 msgid "License"
 msgstr ""
 
-#: templates/footer.php:61
+#: templates/footer.php:62
 msgid "Community"
 msgstr ""
 
-#: templates/footer.php:63
+#: templates/footer.php:64
 msgid "Legal"
 msgstr ""
 
-#: templates/footer.php:64
+#: templates/footer.php:65
 msgid "Privacy"
 msgstr ""
 
-#: templates/footer.php:66
-msgid "Rss"
+#: templates/footer.php:67
+msgid "RSS"
 msgstr ""
 
-#: templates/footer.php:73
+#: templates/footer.php:74
 msgid "We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href=\"http://mozilla.org\">mozilla.org</a>"
 msgstr ""

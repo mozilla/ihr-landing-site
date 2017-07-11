@@ -70,6 +70,16 @@ a{
 	}
 }
 
+.entry-content{
+  a{
+    text-decoration:underline;
+    color:#000;
+    &:hover{
+      color: #48c7ff;
+    }
+  }
+}
+
 
 h1,h2{
   font-size:34px;

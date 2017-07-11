@@ -21,6 +21,11 @@
 	}
 	h2{
 		margin:26px 0 23px;
+		@include menu-max{
+			font-size:28px;
+			line-height:32px;
+			margin:16px 0 13px;
+		}
 		@include md-max{
 			margin:0 0 10px;
 		}
@@ -89,4 +94,12 @@
 		text-decoration:underline;
 		color:#000;
 	}
+}
+
+
+.wp-caption-text{
+	font-size: 14px;
+	line-height: 1.43;
+	margin: -20px 0 18px;
+	text-align: center;
 }

@@ -8,7 +8,9 @@
 		</header>
 
 		<?php the_post_thumbnail('medium_large'); ?>
-
+		<?php if (get_field('feature_caption')): ?>
+			<p class="wp-caption-text"><?php the_field('feature_caption'); ?></p>
+		<?php endif; ?>
 
 		<div class="entry-content">
 			<?php the_content(); ?>

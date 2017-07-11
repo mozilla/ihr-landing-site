@@ -64,7 +64,7 @@
 			<a href="https://www.mozilla.org/about/legal/terms/mozilla/"><span class="icon-legal"></span><?php _e('Legal','ihr'); ?></a>
 			<a href="https://www.mozilla.org/privacy/websites/"><span class="icon-privacy"></span><?php _e('Privacy','ihr'); ?></a>
 			<?php //<a href=""><span class="icon-cookies"></span>Cookies</a> ?>
-			<a href="/feed/"><span class="icon-rss"></span><?php _e('Rss','ihr'); ?></a>
+			<a href="/feed/"><span class="icon-rss"></span><?php _e('RSS','ihr'); ?></a>
 
 		</div>
 

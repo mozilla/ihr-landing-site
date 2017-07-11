@@ -19,13 +19,19 @@
 			border:0;
 			padding:0;
 			margin:0 0 2px;
+			&:focus, 
+			&:hover{
+				color:#000;
+			}
 
 			&.h-icon-visibility:before{
 				content: "\e90c";
+				color:#000;
 				@include icomoon();
 			}
 			&.h-icon-note:before{
 				content: "\e90a";
+				color:#000;
 				@include icomoon();
 			}
 
@@ -34,6 +40,7 @@
 				margin:0 0 2px;
 				&.h-icon-chevron-left:before{
 					content: "\e90b";
+					color:#000;
 					@include icomoon();
 				}
 			}
@@ -41,7 +48,6 @@
 	}
 	
 }
-
 
 body{
 	.annotator-frame .annotator-bucket-bar{

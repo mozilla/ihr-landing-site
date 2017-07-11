@@ -4,13 +4,20 @@
 		background-repeat: no-repeat;
 		background-position: right center;
 		background-size:484px 330px;
-		min-height:330px;
+		height:330px;
 		display:table;
 		width:100%;
 		margin:0 0 28px;
+		&.error-404{
+			background-size:431px 175px;
+			@include menu-max{
+			    background-size: 40%;
+			}
+		}
 		@include md-max{
 			background:none!important;
 			min-height: 0;
+			height:auto;
 		}
 		.copy{
 			padding:30px 0;
@@ -145,6 +152,7 @@
 				position: absolute;
 				bottom:0;
 				left:33px;
+				display:inline-block;
 				@include lg-max{
 					left:3%;
 				}
