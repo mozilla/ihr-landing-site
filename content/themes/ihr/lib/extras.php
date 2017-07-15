@@ -27,7 +27,10 @@ function excerpt_more() {
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
-
+function custom_excerpt_length( $length ) {
+return 24;
+}
+add_filter( 'excerpt_length', __NAMESPACE__ . '\\custom_excerpt_length', 999 );
 
 /**
  * Add localized scripts

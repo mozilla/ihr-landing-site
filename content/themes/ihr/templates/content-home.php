@@ -36,7 +36,7 @@ if( have_rows('feature_pages') ): ?>
 			$size = 'medium';
 
 			if( !empty($image) ) { ?>
-				<a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>>
+				<a href="<?php the_sub_field('link'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>>
 				<?php echo wp_get_attachment_image( $image, $size ); ?>
 				</a>
 			<?php
@@ -45,10 +45,10 @@ if( have_rows('feature_pages') ): ?>
 
 			<div class="copy">
 
-				<h2><a href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('title'); ?></a></h2>
+				<h2><a href="<?php the_sub_field('link'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('title'); ?></a></h2>
 				<p><?php the_sub_field('excerpt'); ?></p>
 			</div>
-			<a class="read-more button" href="<?php the_sub_field('url'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('cta_text'); ?></a>
+			<a class="read-more button" href="<?php the_sub_field('link'); ?>"<?php echo (get_sub_field('new_window') ? ' target="_blank"' : ''); ?>><?php the_sub_field('cta_text'); ?></a>
 
 		</div>
 

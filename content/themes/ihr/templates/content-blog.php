@@ -18,7 +18,7 @@ if( $post_objects ): ?>
 			<?php get_template_part('templates/entry-meta'); ?>
 			
 
-			<p><?php the_excerpt(); ?></p>
+			<?php the_excerpt(); ?>
 			
 
 
@@ -43,7 +43,7 @@ if( $post_objects ): ?>
 			'current_category'    => 0,
 			'echo'                => 1,
 			'hide_empty'          => 0,
-			'show_option_all'     => __( 'Most recent'),
+			'show_option_all'     => __( 'Most Recent'),
 			'title_li'            => '',
 			'use_desc_for_title'  => 1,
 		);
