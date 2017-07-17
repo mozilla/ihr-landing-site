@@ -66,6 +66,12 @@ IHR.settings = {
 				}
 
 
+				//hide load more if there aren't 10 posts
+				//if ($("#posts-wrap .entry-container").length < 10){
+				//	$('.loader').addClass('all-posts-loaded');
+				//}
+
+
 				$(".slick-posts").slick({
 					slidesToShow: 1,
 					slidesToScroll: 1,
@@ -166,7 +172,7 @@ IHR.settings = {
 							   //'&country=' + country +
 							   '&source_url=' + encodeURIComponent(document.location.href);
 
-				console.log(params);
+				//console.log(params);
 
 				  var xhr = new XMLHttpRequest();
 

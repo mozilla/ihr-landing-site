@@ -1,13 +1,13 @@
 <footer class="content-info">
 
-<div class="newsletter-signup">
+<div class="newsletter-signup" id="newsletter-signup">
 <div class="wrap">
 	<div class="container">
 
 		<div class="heading">
-			<h3><?php _e('Join our newsletter','ihr'); ?></h3>
+			<h3><?php _e('Keep me updated','ihr'); ?></h3>
 
-			<p><?php _e('Keep up with the latest Internet Health news.','ihr'); ?></p>
+			<p><?php _e('Receive email about this project and Mozilla.','ihr'); ?></p>
 		</div>
 
 
@@ -19,7 +19,8 @@
 			<div id="newsletter_errors" class="newsletter_errors"></div>
 
 			<div id="newsletter_email" class="form_group form_group_email">
-				<input type="email" id="email" name="email" class="signup-form__email" required="" placeholder="<?php _e('Email address','ihr'); ?>" size="30">
+				<label for="email" class="hidden-label">Email: </label>
+				<input type="email" id="email" name="email" class="signup-form__email" required="required" placeholder="<?php _e('Email address','ihr'); ?>" size="30">
 				
 
 				<div id="newsletter_privacy" class="form_group form_group-agree">
@@ -31,7 +32,7 @@
 				</div>
 
 
-				<button id="newsletter_submit" type="submit" class="signup-form__btn"><?php _e('Join us','ihr'); ?></button>
+				<button id="newsletter_submit" type="submit" class="signup-form__btn"><?php _e('Sign up','ihr'); ?></button>
 			</div>
 
 
@@ -69,7 +70,7 @@
 		</div>
 
 
-		<a class="logo" href="http://mozilla.org"></a>
+		<a class="logo" href="http://mozilla.org">Mozilla.org</a>
 
 		<div class="statement"><?php _e('We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href="http://mozilla.org">mozilla.org</a>','ihr'); ?>
 		</div>

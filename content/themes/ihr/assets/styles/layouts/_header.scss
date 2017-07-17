@@ -25,6 +25,9 @@
 			@include md-max{
 				margin:10px 20px 10px 0;
 			}
+			&:hover{
+				opacity:.7;
+			}
 		}
 		.nav-primary{
 			float:left;
@@ -88,7 +91,6 @@
 			@include font(opensans);
 			@include md-max{
 				top:6px;
-				position:fixed;
 				right:10px;
 			}
 

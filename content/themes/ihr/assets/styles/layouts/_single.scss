@@ -19,18 +19,24 @@
 			border:0;
 			padding:0;
 			margin:0 0 2px;
+			color:#000;
 			&:focus, 
 			&:hover{
 				color:#000;
 			}
 
 			&.h-icon-visibility:before{
-				content: "\e90c";
+				content: "\e90a";
 				color:#000;
 				@include icomoon();
 			}
 			&.h-icon-note:before{
-				content: "\e90a";
+				content: "\e90c";
+				color:#000;
+				@include icomoon();
+			}
+			&.h-icon-visibility-off:before{
+				content: "\e90d";
 				color:#000;
 				@include icomoon();
 			}
@@ -88,7 +94,7 @@ body{
 	@include md-max{
 		margin:20px auto 60px;
 	}
-	.share{
+	.js-share{
 		position:fixed;
 		left:50%;
 		margin:0 0 0 -460px;
@@ -114,6 +120,32 @@ body{
 			color:#8e8e8e;
 			display:block;
 			margin:0 0 17px;
+			&:hover{
+				opacity:.7;
+			}
+		}
+		.share__text{
+			font-size:14px;
+			margin:0 0 7px;
+			@include font('opensans');
+			display:block;
+		}
+	}
+	.mobile-share{
+		display:none;
+		@media (max-width: 750px) {
+			display:block;
+			margin:30px 0 0;
+		}
+		a{
+			color:#8e8e8e;
+			display:inline-block;
+			margin:0 12px;
+			text-align:center;
+			text-decoration:none;
+			&:hover{
+				opacity:.7;
+			}
 		}
 		.share__text{
 			font-size:14px;

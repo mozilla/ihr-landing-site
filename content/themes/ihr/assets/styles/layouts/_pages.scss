@@ -33,7 +33,7 @@
 				margin:0 0 14px;
 			}
 			p{
-				margin:0 0 14px;
+				margin:14px 0;
 				//font-size:20px;
 				//line-height:28px;
 			}
@@ -68,6 +68,9 @@
 					color:#000;
 					font-size:16px;
 					letter-spacing: .5px;
+					&:hover{
+						color: #616161;
+					}
 				}
 				&.selected{
 					a{
@@ -84,6 +87,11 @@
 			width:270px;
 			border-bottom:1px solid #000;
 			position:relative;
+
+			-webkit-appearance: none;
+			border-radius:0;
+			-webkit-border-radius:0;
+
 			@include lg-max{
 				width:35%;
 			}
@@ -97,6 +105,11 @@
 				display:inline-block;
 				vertical-align::middle;
 				border:0;
+
+				background-color:transparent;
+				-webkit-appearance: none;
+				border-radius:0;
+				-webkit-border-radius:0;
 			}
 			.search-submit{
 				border:0;
@@ -105,8 +118,14 @@
 				right:0;
 				bottom:0;
 				padding:0 0 6px;
+
+				-webkit-appearance: none;
+				border-radius:0;
+				-webkit-border-radius:0;
 				span{
 					font-size:17px;
+					line-height: 20px;
+					padding: 2px;
 				}
 			}
 		}

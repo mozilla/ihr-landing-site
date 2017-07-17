@@ -18,7 +18,7 @@ if( $post_objects ): ?>
 			<?php get_template_part('templates/entry-meta'); ?>
 			
 
-			<?php the_excerpt(); ?>
+			<a href="<?php the_permalink(); ?>"><?php the_excerpt(); ?></a>
 			
 
 
@@ -55,7 +55,8 @@ if( $post_objects ): ?>
 
 	<form role="search" method="get" class="search-form" action="/">
 		<input type="hidden" value="post" name="post_type" id="post_type" />
-		<input type="search" class="search-field" value="" name="s">
+		<label for="blog-search" class="hidden-label">Email: </label>
+		<input type="search" class="search-field" value="" name="s" id="blog-search">
 		<button type="submit" class="search-submit" value="Search"><span class="icon-search"></span></button>
 	</form>
 

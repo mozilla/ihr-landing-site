@@ -152,11 +152,11 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?shirzx');
-  src:  url('../fonts/icomoon.eot?shirzx#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?shirzx') format('truetype'),
-    url('../fonts/icomoon.woff?shirzx') format('woff'),
-    url('../fonts/icomoon.svg?shirzx#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?shzrzx');
+  src:  url('../fonts/icomoon.eot?shzrzx#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?shzrzx') format('truetype'),
+    url('../fonts/icomoon.woff?shzrzx') format('woff'),
+    url('../fonts/icomoon.svg?shzrzx#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -221,4 +221,7 @@
 }
 .icon-view:before {
   content: "\e90a";
+}
+.icon-noview:before {
+  content: "\e90d";
 }

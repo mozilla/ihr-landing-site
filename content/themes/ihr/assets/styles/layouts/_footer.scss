@@ -95,8 +95,9 @@
 			background:#48c7ff;
 			border:0;
 			padding:8px 15px 8px 22px;
-
+			cursor:pointer;
 			position: absolute;
+			@include transition();
 
 			@include md-max{
 				display: block;
@@ -111,6 +112,10 @@
 				vertical-align:middle;
 				@include icomoon();
 				font-size:12px;
+			}
+			&:hover{
+				background:#22A1FF;
+				@include transition();
 			}
 
 		}
@@ -135,6 +140,9 @@
 			vertical-align: middle;
 			width: 92%;
 			@include font();
+			@include md-max{
+				width: 85%;
+			}
 			a{
 				color:#000;
 				text-decoration:underline;
@@ -184,6 +192,9 @@
 				padding:1px 7px 0 0;
 				vertical-align:top;
 			}
+			&:hover{
+				opacity:.8;
+			}
 		}
 	}
 
@@ -194,9 +205,13 @@
 		display:inline-block;
 		vertical-align:middle;
 		margin:0 16px 0 35px;
+		text-indent:-555px;
+		overflow:hidden;
 		@include md-max{
 			margin:0 0 15px;
-
+		}
+		&:hover{
+			opacity:.8;
 		}
 	}
 	.statement{
@@ -208,6 +223,9 @@
 		text-align:left;
 		a{
 			color:#fff;
+			&:hover{
+				opacity:.8;
+			}
 		}
 	}
 }
