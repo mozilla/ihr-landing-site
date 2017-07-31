@@ -66,7 +66,7 @@ if( $post_objects ): ?>
 
 //$args = array('post__not_in' => array( 25 ));
 
-$args = array('posts_per_page'=>10);
+$args = array('posts_per_page'=>10,'suppress_filters' => 0);
 
 $post_objects = get_posts($args);
 
