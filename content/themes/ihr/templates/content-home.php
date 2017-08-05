@@ -7,9 +7,8 @@
 		<h1><?php the_title(); ?></h1>
 
 		<?php the_content(); ?>
-		
 
-		<a class="read-more" href="/about/"><?php _e('Read More'); ?></a>
+		<a class="read-more" href="<?php echo apply_filters( 'wpml_permalink', get_permalink(get_page_by_path( 'about' ))); ?>"><?php _e('Read More'); ?></a>
 		</div>
 	</div>
 
@@ -83,7 +82,7 @@ if( $post_objects ): ?>
 
 		<?php endforeach; ?>
 
-		<a class="read-more" href="/blog/"><?php _e('View all blog posts'); ?></a>
+		<a class="read-more" href="<?php echo apply_filters( 'wpml_permalink', get_permalink(get_page_by_path( 'blog' ))); ?>"><?php _e('View all blog posts'); ?></a>
 
 	</div>
 
