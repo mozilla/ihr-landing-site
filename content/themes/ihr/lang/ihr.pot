@@ -30,7 +30,7 @@ msgstr ""
 msgid "archive of reports"
 msgstr ""
 
-#: templates/content-blog.php:89
+#: templates/content-blog.php:91
 msgid "Load more blog posts"
 msgstr ""
 
@@ -38,54 +38,66 @@ msgstr ""
 msgid "annotations"
 msgstr ""
 
+#: templates/entry-meta.php:37
+msgid "comments"
+msgstr ""
+
+#: templates/entry-meta.php:37
+msgid "1 comment"
+msgstr ""
+
+#: templates/entry-meta.php:37
+msgid "% comments"
+msgstr ""
+
 #: templates/footer.php:8
-msgid "Join our newsletter"
+msgid "Keep me updated"
 msgstr ""
 
 #: templates/footer.php:10
-msgid "Keep up with the latest Internet Health news."
+msgid "Receive email about this project and Mozilla."
 msgstr ""
 
-#: templates/footer.php:22
+#: templates/footer.php:23
 msgid "Email address"
 msgstr ""
 
-#: templates/footer.php:28
+#: templates/footer.php:29
 msgid "I’m okay with mozilla handling my info as explained in this <a href=\"https://www.mozilla.org/privacy/websites/\">privacy notice</a>."
 msgstr ""
 
-#: templates/footer.php:34
-msgid "Join us"
+#: templates/footer.php:35
+msgid "Sign up"
 msgstr ""
 
-#: templates/footer.php:43
+#: templates/footer.php:44
 msgid "Thanks for joining. Please check your inbox or your spam filter for an email confirmation from us."
 msgstr ""
 
-#: templates/footer.php:59
+#: templates/footer.php:60
 msgid "Contact"
 msgstr ""
 
-#: templates/footer.php:60
+#: templates/footer.php:61
 msgid "License"
 msgstr ""
 
-#: templates/footer.php:62
+#: templates/footer.php:63
 msgid "Community"
 msgstr ""
 
-#: templates/footer.php:64
+#: templates/footer.php:65
 msgid "Legal"
 msgstr ""
 
-#: templates/footer.php:65
+#: templates/footer.php:66
 msgid "Privacy"
 msgstr ""
 
-#: templates/footer.php:67
+#: templates/footer.php:68
 msgid "RSS"
 msgstr ""
 
-#: templates/footer.php:74
+#: templates/footer.php:75
 msgid "We are a global non-profit dedicated to putting you in control of your online experience and shaping the future of the web for the public good. Visit us at <a href=\"http://mozilla.org\">mozilla.org</a>"
 msgstr ""

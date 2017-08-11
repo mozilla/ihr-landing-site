@@ -56,7 +56,7 @@
 
 		<div class="featured-blog-posts">
 
-			<h3 class="bar">related posts</h3>
+			<h3 class="bar"><?php _e('related posts','ihr'); ?></h3>
 
 			<?php 
 			//only add slick wrapper if there is more than one post

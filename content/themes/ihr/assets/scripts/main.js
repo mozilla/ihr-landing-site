@@ -336,12 +336,12 @@ IHR.settings = {
 
 				$(".search-form").submit(function(e){
 
-					var url = "/"; // the script where you handle the form input.
+					var url = $(this).attr('action'); // the script where you handle the form input.
 					var $that = $(this);
 
 					$('#posts-wrap').empty();
 					$('.loader').addClass('loading');
-								$('.loader').addClass('all-posts-loaded');
+					$('.loader').addClass('all-posts-loaded');
 
 					$.ajax({
 						   type: "POST",
@@ -349,7 +349,6 @@ IHR.settings = {
 						   data: $that.serialize(), // serializes the form's elements.
 						   success: function(data)
 						   {
-
 								$('.loader').removeClass('loading');
 								$('#posts-wrap').append($(data).find(".main.container").html());
 						   }

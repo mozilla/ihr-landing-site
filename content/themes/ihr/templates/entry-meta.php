@@ -34,7 +34,7 @@
 		 <span class="pipe">|</span>
 		<a class="comments-link" href="#<?php //comments_link(); ?>">
 		<?php
-		comments_number( 'comments', '1 comment', '% comments' ); ?>
+		comments_number( __('comments','ihr'), __('1 comment','ihr'), __('% comments','ihr') ); ?>
 		</a>
 		<?php
 	}
