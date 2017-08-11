@@ -94,7 +94,7 @@ IHR.settings = {
 
 					if ($('.annotator-frame').hasClass('annotator-collapsed')){
 						e.stopPropagation();
-						$('.annotator-frame-button').trigger('click');
+						$('.annotator-frame-button--sidebar_toggle').trigger('click');
 					}else{
 						//do nothing because there is already an event on the body to close it
 					}
