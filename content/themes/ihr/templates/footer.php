@@ -32,7 +32,7 @@
 				</div>
 
 
-				<button id="newsletter_submit" type="submit" class="signup-form__btn"><?php _e('Sign up','ihr'); ?></button>
+				<button id="newsletter_submit" type="submit" class="signup-form__btn" onclick="ga('send', 'event', 'Signup', 'Form Submitted', 'Internet Health Report')"><?php _e('Sign up','ihr'); ?></button>
 			</div>
 
 
